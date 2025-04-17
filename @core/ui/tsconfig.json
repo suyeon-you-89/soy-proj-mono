@@ -1,0 +1,28 @@
+{  
+  "compilerOptions": { 
+    // override? 
+    "target": "ESNext",
+    "module": "ESNext",
+    "jsx": "react-jsx", 
+    "declarationDir": "dist/types",
+    "emitDeclarationOnly": false, 
+    "moduleResolution": "Node",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "removeComments": true, 
+    // for monorepo 
+    "composite": true,
+
+    "declaration": true, // d.ts 파일 생성 
+    "declarationMap": true,
+    "outDir": "dist", 
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "types": ["node"],
+    "typeRoots": ["src/types", "node_modules/@types"]
+  },
+  "include": ["src"]
+}
